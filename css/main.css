@@ -106,7 +106,10 @@ a:hover,
 a:active {
   outline: 0;
 }
-
+/*hhhh{
+	color:#5a5a76;
+	list-style-type: none;
+}*/
 
 /* ===================================================================
  * # typography & general theme styles
@@ -1421,7 +1424,7 @@ body.menu-is-open {
 .display-1 {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 4.6rem;
+  font-size: 2.6rem;
   line-height: 1.5;
   letter-spacing: -0.03rem;
   margin-top: 0;
@@ -1431,14 +1434,16 @@ body.menu-is-open {
 .subhead {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 1.8rem;
+  /*font-size: 1.8rem;*/
+  font-size: 7rem;
   line-height: 1.333;
   text-transform: uppercase;
   letter-spacing: .25rem;
-  color: #793ea5;
+  color: #FFFFFF;
   margin-top: 0;
   margin-bottom: 3rem;
   position: relative;
+  text-align: justify;
 }
 
 .item-title {
@@ -2733,7 +2738,7 @@ html.no-csstransitions .home-content__main {
   padding-top: 18rem;
   padding-bottom: 18rem;
   /*background-color: #121212;*/
-  background-color: #8c9e0e;
+  background-color: #10929c;
   position: relative;
 }
 
