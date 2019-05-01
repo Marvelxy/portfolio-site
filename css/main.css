@@ -3000,6 +3000,7 @@ html.no-csstransitions .home-content__main {
   padding-top: 18rem;
   padding-bottom: 18rem;
   position: relative;
+  background-color: #a0b5b6;
 }
 
 .s-works::before {
