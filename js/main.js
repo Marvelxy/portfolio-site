@@ -256,3 +256,8 @@
     })();
 
 })(jQuery);
+
+
+function setImageURL(){
+    console.log('here');
+}
