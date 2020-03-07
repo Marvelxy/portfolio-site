@@ -3,7 +3,7 @@ $(document).ready(function(){
 		$('html, body').animate({
 				scrollTop: $('#portfolio').offset().top - 80
 			},
-			'3000'
+			'slow'
 		);
 	});
 
