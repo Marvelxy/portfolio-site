@@ -1,15 +1,15 @@
 $(document).ready(function(){
 	$('#see_my_portfolio').on('click', function(){
-		topMenu = $("#navbar-links").outerHeight()+15;
+		topMenu = $("#navbar-links").outerHeight()+1;
 		$('html, body').animate({
-				scrollTop: $('#portfolio').offset().top - topMenuHeight+1
+				scrollTop: $('#portfolio').offset().top
 			},
 			'slow'
 		);
 	});
 
 	$('#navbar-brand').on('click', function(){
-		topMenu = $("#navbar-links").outerHeight()+15;
+		topMenu = $("#navbar-links").outerHeight()+1;
 		$('html, body').animate({
 				scrollTop: 0
 			},
@@ -24,7 +24,8 @@ $(document).ready(function(){
 	// Cache selectors
 var lastId,
     topMenu = $("#navbar-links"),
-    topMenuHeight = topMenu.outerHeight()+15,
+    //topMenuHeight = topMenu.outerHeight()+15,
+		topMenuHeight = topMenu.outerHeight(),
     // All list items
     menuItems = topMenu.find("a"),
     // Anchors corresponding to menu items
@@ -37,7 +38,8 @@ var lastId,
 	// so we can get a fancy scroll animation
 	menuItems.click(function(e){
 	  var href = $(this).attr("href"),
-	      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+	      //offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+				offsetTop = href === "#" ? 0 : $(href).offset().top;
 	  $('html, body').stop().animate({
 	      scrollTop: offsetTop
 	  }, 300);
