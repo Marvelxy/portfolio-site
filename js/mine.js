@@ -1,7 +1,8 @@
 $(document).ready(function(){
 	$('#see_my_portfolio').on('click', function(){
+		topMenu = $("#navbar-links").outerHeight()+15;
 		$('html, body').animate({
-				scrollTop: $('#portfolio').offset().top - 80
+				scrollTop: $('#portfolio').offset().top - topMenuHeight+1
 			},
 			'slow'
 		);
