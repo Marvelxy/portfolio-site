@@ -8,6 +8,15 @@ $(document).ready(function(){
 		);
 	});
 
+	$('#navbar-brand').on('click', function(){
+		topMenu = $("#navbar-links").outerHeight()+15;
+		$('html, body').animate({
+				scrollTop: 0
+			},
+			'slow'
+		);
+	});
+
 	/*$('#how_it_works_link').on('click', function(){
 		$('html, body').animate({ scrollTop: $('#how_it_works').offset().top }, '2000');
 	});*/
