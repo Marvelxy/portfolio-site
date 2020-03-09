@@ -23,7 +23,7 @@ $(document).ready(function(){
 
 	// Cache selectors
 var lastId,
-    topMenu = $("#navbar-links"),
+    topMenu = $(".navbar-links"),
     //topMenuHeight = topMenu.outerHeight()+15,
 		topMenuHeight = topMenu.outerHeight(),
     // All list items
