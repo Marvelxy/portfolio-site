@@ -1,3 +1,7 @@
 .service_item:hover i{
   color: white;
 }
+
+.service_item h4:hover{
+  cursor: default;
+}
