@@ -87,8 +87,20 @@ var lastId,
 	$('.portfolio-details-2').on('click', function(e){
 		$('header').removeClass('header_area, navbar_fixed');
 
-		var siblings = $(this).parent().siblings('.img-fluid');//.find('.img-fluid');
-		$('#modal-image').attr('src', siblings[0].src);
+		var image_src = $(this).parent().siblings('.img-fluid');
+		var portfolio_title = $(this).parent().find('.block-header-link').text();
+		var description = $(this).parent().siblings('.long-description').text();
+		var url = $(this).parent().siblings('.url').attr('url');
+
+		console.log(url)
+		if(url === ''){
+			$('#visitSite').addClass('disabled');
+		}
+
+
+		$('#modilTitle').text(portfolio_title);
+		$('#modal-image').attr('src', image_src[0].src);
+		$('#description').text(description);
 		$('.modal').modal('show');
 
 		e.preventDefault();
