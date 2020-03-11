@@ -30,3 +30,12 @@
 .single_portfolio p:hover{
   cursor: default;
 }
+
+.block-white-link, .block-white-link:hover{
+  display: block;
+  color: #ffffff;
+}
+
+.block-header-link{
+  display: block;
+}
