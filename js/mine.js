@@ -70,9 +70,25 @@ var lastId,
 	});
 
 
+	// Each port folio item has two events that display the details,
+	// because they have different ways of getting the portfolio details.
+
 	// Show portfolio modal details
-	$('.portfolio-details').on('click', function(e){
+	$('.portfolio-details-1').on('click', function(e){
 		$('header').removeClass('header_area, navbar_fixed');
+		$('.modal').modal('show');
+		var siblings = $(this).siblings('.single_portfolio');
+		console.log(siblings);
+
+		e.preventDefault();
+	});
+
+	// Show portfolio modal details
+	$('.portfolio-details-2').on('click', function(e){
+		$('header').removeClass('header_area, navbar_fixed');
+
+		var siblings = $(this).parent().siblings('.img-fluid');//.find('.img-fluid');
+		$('#modal-image').attr('src', siblings[0].src);
 		$('.modal').modal('show');
 
 		e.preventDefault();
