@@ -26,3 +26,7 @@
 .contact_area .gmail a:hover{
   color: #b10909;
 }
+
+.single_portfolio p:hover{
+  cursor: default;
+}
