@@ -68,4 +68,13 @@ var lastId,
 	         .end().filter("[href='#"+id+"']").parent().addClass("active");
 	   }
 	});
+
+
+	// Show portfolio modal details
+	$('.portfolio-details').on('click', function(e){
+		$('header').removeClass('header_area, navbar_fixed');
+		$('.modal').modal('show');
+
+		e.preventDefault();
+	})
 });
