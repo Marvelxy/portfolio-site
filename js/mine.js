@@ -99,7 +99,7 @@ var lastId,
 
 
 		$('#modilTitle').text(portfolio_title);
-		$('#modal-image').attr('src', image_src[0].src);
+		//$('#modal-image').attr('src', image_src[0].src);
 		$('#description').text(description);
 		$('.modal').modal('show');
 
