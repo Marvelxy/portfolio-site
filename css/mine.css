@@ -51,7 +51,8 @@
 .portfolio-overlay:hover{
   position: absolute;
   top: 0px;
-  background-color: hsla(226, 83%, 49%, 0.71);
+  /*background-color: hsla(226, 83%, 49%, 0.71);*/
+  background-color: #007bff;
   width: 100%;
   height: 100%;
 }

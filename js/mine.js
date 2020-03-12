@@ -104,5 +104,14 @@ var lastId,
 		$('.modal').modal('show');
 
 		e.preventDefault();
+	});
+
+	$('.portfolio-short-info').hide();
+	$('.portfolio-overlay').on('mouseover', function(){
+		$('.portfolio-short-info').toggle();
+	})
+
+	$('.portfolio-overlay').on('mouseout', function(){
+		$('.portfolio-short-info').toggle();
 	})
 });
