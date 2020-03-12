@@ -108,10 +108,18 @@ var lastId,
 
 	$('.portfolio-short-info').hide();
 	$('.portfolio-overlay').on('mouseover', function(){
-		$('.portfolio-short-info').toggle();
-	})
+		//$('this .portfolio-short-info').toggle();
+		//$('this .portfolio-short-info p').toggle();
+		//$('this .portfolio-short-info h4').toggle();
+
+		$(this).find('.portfolio-short-info').toggle();
+	});
 
 	$('.portfolio-overlay').on('mouseout', function(){
-		$('.portfolio-short-info').toggle();
-	})
+		//$('this .portfolio-short-info').toggle();
+		//$('this .portfolio-short-info p').toggle();
+		//$('this .portfolio-short-info h4').toggle();
+		$(this).find('.portfolio-short-info').toggle();
+	});
+
 });
