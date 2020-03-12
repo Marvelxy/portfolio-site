@@ -87,19 +87,19 @@ var lastId,
 	$('.portfolio-details-2').on('click', function(e){
 		$('header').removeClass('header_area, navbar_fixed');
 
-		var image_src = $(this).parent().siblings('.img-fluid');
-		var portfolio_title = $(this).parent().find('.block-header-link').text();
-		var description = $(this).parent().siblings('.long-description').text();
-		var url = $(this).parent().siblings('.url').attr('url');
+		var image = $(this).parent().find('.img-fluid');
+		var url = $(this).siblings('.portfolio-full-info').find('.url').attr('url');
+		var portfolio_title = $(this).find('.portfolio-short-info h4').text();
+		var description = $(this).parent().find('.long-description').text();
 
-		console.log(url)
+		console.log(description);
 		if(url === ''){
 			$('#visitSite').addClass('disabled');
 		}
 
 
 		$('#modilTitle').text(portfolio_title);
-		//$('#modal-image').attr('src', image_src[0].src);
+		$('#modal-image').attr('src', image[0].src);
 		$('#description').text(description);
 		$('.modal').modal('show');
 
