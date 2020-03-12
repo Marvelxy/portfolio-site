@@ -86,6 +86,7 @@ var lastId,
 	// Show portfolio modal details
 	$('.portfolio-details-2').on('click', function(e){
 		$('header').removeClass('header_area, navbar_fixed');
+		$('#visitSite').removeClass('disabled');
 
 		var image = $(this).parent().find('.img-fluid');
 		var url = $(this).siblings('.portfolio-full-info').find('.url').attr('url');
