@@ -96,6 +96,9 @@ var lastId,
 		if(url === ''){
 			$('#visitSite').addClass('disabled');
 		}
+		else{
+			$('#visitSite').attr('href', 'http://'+url);
+		}
 
 
 		$('#modilTitle').text(portfolio_title);
