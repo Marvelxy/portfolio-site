@@ -9,14 +9,27 @@ jobs:
   github-pages:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup node
-        uses: actions/setup-node@v2
-        with:
-          node-version: '15.14.0'
       - uses: actions/checkout@v2
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.0.0"
+
+      - name: Install Gems
+        run: |
+          bundle install
+
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 15.14.0
       #- uses: borales/actions-yarn@v2.0.0
+
       - name: Yarn install
-        run: yarn install
+        run: |
+          yarn install
+
       - uses: helaili/jekyll-action@v2
         with:
           token: ${{ secrets.TOKEN_SECRET }}
