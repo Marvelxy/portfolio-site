@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: '15.14.0'
       - uses: actions/checkout@v2
-      - uses: borales/actions-yarn@v2.0.0
+      #- uses: borales/actions-yarn@v2.0.0
       - name: Yarn install
         run: yarn install
         # with:
