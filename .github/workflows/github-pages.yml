@@ -30,7 +30,8 @@ jobs:
         run: |
           yarn install
 
-      - uses: helaili/jekyll-action@v2
+      # - uses: helaili/jekyll-action@v2
+      - uses: limjh16/jekyll-action-ts@v2
         with:
           token: ${{ secrets.TOKEN_SECRET }}
         env:
