@@ -21,3 +21,10 @@ $RECYCLE.BIN/
 # =========================
 # Operating System Files
 # =========================
+
+_site/
+.cache/
+.jekyll-cache/
+dist/
+node_modules/
+old-site/
