@@ -1,7 +1,20 @@
-<nav>
-  {% for item in site.data.navigation %}
-  <a href="{{ item.link }}" {% if page.url==item.link %}class="current" {% endif %}>
-    {{ item.name }}
-  </a>
-  {% endfor %}
+<nav class="shadow p-4 w-full flex justify-center">
+  <div class="flex justify-between items-center w-5/6">
+    <div class="flex-none w-10 h-10">
+      <!-- This item will not grow -->
+      <div class="rounded-full h-10 w-10 flex items-center justify-center bg-blue-900">
+        <a href="/">
+          <img src="assets/images/14072392.jpeg" class="rounded-full">
+        </a>
+      </div>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+      {% for item in site.data.navigation %}
+      <a href="{{ item.link }}" {% if page.url==item.link %}class="flex current ml-10" {% endif %} class="flex ml-10">
+        {{ item.name }}
+      </a>
+      {% endfor %}
+    </div>
+    </div>
 </nav>
