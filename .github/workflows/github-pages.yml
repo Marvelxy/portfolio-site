@@ -16,6 +16,10 @@ jobs:
         with:
           ruby-version: "3.0.0"
 
+      - name: Install Linux packages
+        rub: |
+          apt install libvips-dev
+
       - name: Install Gems
         run: |
           bundle install
