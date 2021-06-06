@@ -2,3 +2,8 @@ title: "Jekyll Actions Demo"
 
 plugins:
   - jekyll-postcss
+  - jekyll_picture_tag
+
+picture:
+  source: "/assets/images"
+  # output: "/assets/images"
