@@ -11,14 +11,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Install Linux packages
+        run: |
+          sudo apt install libvips-dev
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.0.0"
-
-      - name: Install Linux packages
-        run: |
-          apt install libvips-dev
 
       - name: Install Gems
         run: |
