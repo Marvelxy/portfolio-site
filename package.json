@@ -3,8 +3,12 @@
     "autoprefixer": "^10.2.6",
     "postcss": "^8.3.0",
     "postcss-import": "^14.0.2",
+    "sharp": "^0.28.3",
     "tailwind": "^4.0.0",
     "tailwindcss": "^2.1.4",
     "ws": "^6.2.2"
+  },
+  "resolutions": {
+    "minipass": "2.7.0"
   }
 }
