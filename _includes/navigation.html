@@ -1,7 +1,6 @@
-<nav class="shadow p-4 w-full flex justify-center">
+<!--<nav class="shadow p-4 w-full flex justify-center">
   <div class="flex justify-between items-center w-5/6">
     <div class="flex-none w-10 h-10">
-      <!-- This item will not grow -->
       <div class="rounded-full h-10 w-10 flex items-center justify-center bg-blue-900">
         <a href="/">
           <img src="assets/images/14072392.jpeg" class="rounded-full">
@@ -9,7 +8,7 @@
       </div>
     </div>
 
-    <div class="w-1/3 flex justify-end">
+    <div class="w-full sm:w-full md:w-full lg:w-1/2 flex justify-end">
       {% for item in site.data.navigation %}
       <a href="{{ item.link }}" {% if page.url==item.link %}class="flex current ml-10" {% endif %} class="flex ml-10">
         {{ item.name }}
@@ -17,4 +16,44 @@
       {% endfor %}
     </div>
     </div>
+</nav>-->
+
+
+<!--<nav id="site-menu" class="flex items-center justify-between flex-wrap bg-teal-500 px-6 py-2 border-b"
+  style="position:relative;">-->
+<nav class="shadow p-4 w-full flex justify-center">
+  <div class="flex justify-between items-center w-5/6">
+    <!--<a href="{{route('/')}}" class="flex items-center flex-shrink-0 text-white mr-6">
+      <img src="assets/images/14072392.jpeg" width="50" class="pt-1" style="margin-left: -15px;">
+      <span class="text-xl tracking-tight" style="margin-left: -10px;">THE BIZ CARD</span>
+    </a>-->
+    <div class="flex-none w-10 h-10">
+      <div class="rounded-full h-10 w-10 flex items-center justify-center bg-blue-900">
+        <a href="/">
+          <img src="assets/images/14072392.jpeg" class="rounded-full">
+        </a>
+      </div>
+    </div>
+
+    <div class="block md:hidden lg:hidden">
+      <button id="menuBtn"
+        class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
+        onclick="navToggle();">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- <div id="menu" class="w-full flex-grow hidden lg:flex lg:items-center lg:w-auto" style="">-->
+    <div class="w-full flex-grow hidden md:flex lg:flex sm:w-full md:w-full lg:w-1/2 justify-end">
+      {% for item in site.data.navigation %}
+      <a href="{{ item.link }}"
+        class="block mt-4 lg:inline-block lg:mt-0 text-gray-600 hover:text-black border-b-2 border-white hover:border-b-2 hover:border-black mr-4 transition delay-100 duration-150 ease-in-out">
+        {{ item.name }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
 </nav>
