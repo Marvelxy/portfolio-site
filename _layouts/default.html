@@ -11,6 +11,38 @@
 <body>
   {% include navigation.html %}
   {{ content }}
+  <script>
+    function navToggle() {
+      var btn = document.querySelector('#menuBtn');
+      var nav = document.querySelector('#menu');
+      if (btn) {
+        nav.classList.toggle('hidden');
+        nav.classList.toggle('mobile-nav', true)
+        nav.classList.toggle('absolute', true)
+      }
+    }
+
+    function resetNav() {
+      let deviceWidth = document.documentElement.clientWidth;
+      var nav = document.querySelector('#menu');
+      if (deviceWidth > 767) {
+        if (nav) {
+          nav.classList.remove('mobile-nav')
+        }
+      }
+      else {
+        if (nav) {
+          nav.classList.add('hidden');
+          nav.classList.add('mobile-nav')
+          nav.classList.toggle('absolute', true)
+        }
+      }
+    }
+
+    (function () {
+      window.addEventListener("resize", resetNav);
+    })()
+  </script>
 </body>
 
 </html>
