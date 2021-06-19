@@ -40,8 +40,9 @@
 
 <!--<nav id="site-menu" class="flex items-center justify-between flex-wrap bg-teal-500 px-6 py-2 border-b"
   style="position:relative;">-->
-<nav class="shadow p-4 w-full flex justify-center">
-  <div class="flex justify-between items-center w-5/6">
+<!--<nav class="shadow p-4 w-full flex justify-center">-->
+<nav class="shadow p-4 w-full flex md:justify-center lg:justify-center">
+  <div class="relative flex justify-between items-center w-full md:w-5/6 lg:w-5/6">
     <!--<a href="" class="flex items-center flex-shrink-0 text-white mr-6">
       <img src="assets/images/14072392.jpeg" width="50" class="pt-1" style="margin-left: -15px;">
       <span class="text-xl tracking-tight" style="margin-left: -10px;">THE BIZ CARD</span>
@@ -54,9 +55,29 @@
       </div>
     </div>
 
+    <!-- <div id="menu" class="w-full flex-grow hidden lg:flex lg:items-center lg:w-auto" style="">-->
+    <div id="menu" class="hidden md:flex lg:flex lg:w-full md:w-full justify-end">
+      
+      <a href="/"
+        class="block lg:inline-block lg:mt-0 text-gray-600 hover:text-black border-b-2 border-white hover:border-b-2 hover:border-black mr-4 transition delay-100 duration-150 ease-in-out">
+        About me
+      </a>
+      
+      <a href=""
+        class="block lg:inline-block lg:mt-0 text-gray-600 hover:text-black border-b-2 border-white hover:border-b-2 hover:border-black mr-4 transition delay-100 duration-150 ease-in-out">
+        What I do
+      </a>
+      
+      <a href=""
+        class="block lg:inline-block lg:mt-0 text-gray-600 hover:text-black border-b-2 border-white hover:border-b-2 hover:border-black mr-4 transition delay-100 duration-150 ease-in-out">
+        Contact me
+      </a>
+      
+    </div>
+
     <div class="block md:hidden lg:hidden">
       <button id="menuBtn"
-        class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
+        class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-black hover:border-black"
         onclick="navToggle();">
         <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <title>Menu</title>
@@ -64,29 +85,41 @@
         </svg>
       </button>
     </div>
-
-    <!-- <div id="menu" class="w-full flex-grow hidden lg:flex lg:items-center lg:w-auto" style="">-->
-    <div class="w-full flex-grow hidden md:flex lg:flex sm:w-full md:w-full lg:w-1/2 justify-end">
-      
-      <a href="/"
-        class="block mt-4 lg:inline-block lg:mt-0 text-gray-600 hover:text-black border-b-2 border-white hover:border-b-2 hover:border-black mr-4 transition delay-100 duration-150 ease-in-out">
-        About me
-      </a>
-      
-      <a href=""
-        class="block mt-4 lg:inline-block lg:mt-0 text-gray-600 hover:text-black border-b-2 border-white hover:border-b-2 hover:border-black mr-4 transition delay-100 duration-150 ease-in-out">
-        What I do
-      </a>
-      
-      <a href=""
-        class="block mt-4 lg:inline-block lg:mt-0 text-gray-600 hover:text-black border-b-2 border-white hover:border-b-2 hover:border-black mr-4 transition delay-100 duration-150 ease-in-out">
-        Contact me
-      </a>
-      
-    </div>
   </div>
 </nav>
   <h1>about!</h1>
+  <script>
+    function navToggle() {
+      var btn = document.querySelector('#menuBtn');
+      var nav = document.querySelector('#menu');
+      if (btn) {
+        nav.classList.toggle('hidden');
+        nav.classList.toggle('mobile-nav', true)
+        nav.classList.toggle('absolute', true)
+      }
+    }
+
+    function resetNav() {
+      let deviceWidth = document.documentElement.clientWidth;
+      var nav = document.querySelector('#menu');
+      if (deviceWidth > 767) {
+        if (nav) {
+          nav.classList.remove('mobile-nav')
+        }
+      }
+      else {
+        if (nav) {
+          nav.classList.add('hidden');
+          nav.classList.add('mobile-nav')
+          nav.classList.toggle('absolute', true)
+        }
+      }
+    }
+
+    (function () {
+      window.addEventListener("resize", resetNav);
+    })()
+  </script>
 </body>
 
 </html>
