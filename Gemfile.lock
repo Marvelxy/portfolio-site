@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.7.0)
+    addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
     colorator (1.1.0)
     concurrent-ruby (1.1.8)
@@ -53,7 +53,6 @@ GEM
     mime-types (3.3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2021.0225)
-    mini_magick (4.11.0)
     objective_elements (1.1.2)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -81,7 +80,6 @@ DEPENDENCIES
   jekyll (~> 4.2)
   jekyll-postcss
   jekyll_picture_tag (~> 2.0)
-  mini_magick (~> 4.3)
   webrick
 
 BUNDLED WITH
