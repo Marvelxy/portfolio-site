@@ -18,7 +18,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.0.0"
+          ruby-version: "3.4.4"
 
       - name: Install Gems
         run: |
@@ -27,12 +27,11 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v1
         with:
-          node-version: 15.14.0
-      #- uses: borales/actions-yarn@v2.0.0
+          node-version: 22.22.2
 
-      - name: Yarn install
+      - name: NPM install
         run: |
-          yarn install
+          npm install
 
       # - uses: helaili/jekyll-action@v2
       - uses: limjh16/jekyll-action-ts@v2
