@@ -33,16 +33,12 @@ jobs:
         run: |
           npm install
 
-      # - uses: helaili/jekyll-action@v2
       - uses: limjh16/jekyll-action-ts@v2
-        # with:
-        #  token: ${{ secrets.TOKEN_SECRET }}
-        #env:
-        #  NODE_ENV: "production"
+
       - name: 🚀 deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           enable_cache: true
-          github_token: ${{ secrets.TOKEN_SECRET }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
           # publish_branch: master
