@@ -1,0 +1,62 @@
+<nav class="fixed w-full z-50 transition-all duration-300 glassmorphism top-0 left-0">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="/" class="flex items-center gap-3 group">
+          <div
+            class="relative w-12 h-12 rounded-full overflow-hidden border-2 border-transparent group-hover:border-blue-500 transition-colors duration-300 shadow-md">
+            <img src="{{ '/assets/images/14072392.jpeg' | relative_url }}" alt="Profile Image"
+              class="w-full h-full object-cover">
+          </div>
+          <span
+            class="font-bold text-xl tracking-tight text-gray-800 group-hover:text-blue-600 transition-colors duration-300 hidden sm:block">Marvelous
+            A.</span>
+        </a>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:block">
+        <div class="ml-10 flex items-baseline space-x-8">
+          {% for item in site.data.navigation %}
+          <a href="{{ item.link | relative_url }}"
+            class="nav-link relative text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300">
+            {{ item.name }}
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden flex items-center">
+        <button id="menuBtn" onclick="navToggle()"
+          class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none transition-colors duration-300"
+          aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!-- Icon when menu is closed -->
+          <svg id="menuIconOpen" class="block h-6 w-6 transition-opacity duration-300"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <!-- Icon when menu is open -->
+          <svg id="menuIconClose" class="hidden h-6 w-6 transition-opacity duration-300"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="md:hidden bg-white backdrop-blur-md border-b border-gray-200 absolute w-full shadow-xl">
+    <div class="px-4 pt-2 pb-6 space-y-1 sm:px-3 flex flex-col items-center">
+      {% for item in site.data.navigation %}
+      <a href="{{ item.link | relative_url }}"
+        class="mobile-nav-link text-gray-800 hover:text-blue-600 block px-3 py-4 rounded-md text-base font-semibold w-full text-center border-b border-gray-100 last:border-0 transition-colors duration-200">
+        {{ item.name }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</nav>
