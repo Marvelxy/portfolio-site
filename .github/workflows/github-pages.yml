@@ -13,6 +13,7 @@ jobs:
 
       - name: Install Linux packages
         run: |
+          sudo apt update
           sudo apt install libvips-dev
 
       - name: Setup Ruby
