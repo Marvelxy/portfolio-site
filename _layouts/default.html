@@ -22,7 +22,7 @@
   <meta name="msapplication-TileImage" content="/assets/images/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <title>Marvelous Akpotu | {{ page.title }}</title>
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/output.css">
 </head>
 
 <body>
@@ -36,7 +36,7 @@
       const mobileMenu = document.getElementById('mobileMenu');
       const iconOpen = document.getElementById('menuIconOpen');
       const iconClose = document.getElementById('menuIconClose');
-      
+
       mobileMenu.classList.toggle('open');
       iconOpen.classList.toggle('hidden');
       iconClose.classList.toggle('hidden');
@@ -47,7 +47,7 @@
       const mobileMenu = document.getElementById('mobileMenu');
       const iconOpen = document.getElementById('menuIconOpen');
       const iconClose = document.getElementById('menuIconClose');
-      
+
       if (deviceWidth >= 768) {
         if (mobileMenu && mobileMenu.classList.contains('open')) {
           mobileMenu.classList.remove('open');
