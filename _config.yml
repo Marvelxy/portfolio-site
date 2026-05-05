@@ -1,7 +1,6 @@
 title: "Jekyll Actions Demo"
 
 plugins:
-  - jekyll-postcss
   - jekyll_picture_tag
 
 picture:
