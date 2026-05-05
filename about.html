@@ -22,84 +22,120 @@
   <meta name="msapplication-TileImage" content="/assets/images/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <title>Marvelous Akpotu | About</title>
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/output.css">
 </head>
 
 <body>
-  <nav class="shadow p-4 w-full flex justify-center">
-  <div class="relative flex justify-between items-center w-full md:w-5/6 lg:w-5/6">
-    <div class="flex-none w-10 h-10">
-      <div class="rounded-full h-10 w-10 flex items-center justify-center bg-blue-900">
-        <a href="/">
-          <img src="assets/images/14072392.jpeg" class="rounded-full">
+  <nav class="fixed w-full z-50 transition-all duration-300 futuristic-nav top-0 left-0">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="/" class="flex items-center gap-3 group">
+          <span
+            class="font-mono font-bold text-xl tracking-widest text-cyan-400 group-hover:text-white transition-colors duration-300 tech-glow">
+            <span class="text-gray-500">&lt;</span>MARVELOUS<span class="text-gray-500">/&gt;</span><span
+              class="blinking-cursor">_</span>
+          </span>
         </a>
       </div>
-    </div>
 
-    <div id="menu" class="hidden md:flex lg:flex lg:w-full md:w-full justify-end">
+      <!-- Desktop Menu -->
+      <div class="hidden md:block">
+        <div class="ml-10 flex items-baseline space-x-8 font-mono tracking-widest">
+          
+          <a href="/"
+            class="nav-link relative text-gray-400 hover:text-cyan-400 px-3 py-2 text-sm uppercase transition-all duration-300">
+            About me
+          </a>
+          
+          <a href=""
+            class="nav-link relative text-gray-400 hover:text-cyan-400 px-3 py-2 text-sm uppercase transition-all duration-300">
+            What I do
+          </a>
+          
+          <a href=""
+            class="nav-link relative text-gray-400 hover:text-cyan-400 px-3 py-2 text-sm uppercase transition-all duration-300">
+            Contact me
+          </a>
+          
+        </div>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden flex items-center">
+        <button id="menuBtn" onclick="navToggle()"
+          class="inline-flex items-center justify-center p-2 text-white hover:text-white focus:outline-none transition-colors duration-300 border border-transparent hover:border-cyan-400 rounded-sm"
+          aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!-- Icon when menu is closed -->
+          <svg id="menuIconOpen" class="block h-6 w-6 transition-opacity duration-300"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <!-- Icon when menu is open -->
+          <svg id="menuIconClose" class="hidden h-6 w-6 transition-opacity duration-300"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="md:hidden futuristic-mobile-nav absolute w-full border-b border-cyan-500">
+    <div class="px-4 pt-2 pb-6 space-y-1 sm:px-3 flex flex-col items-center font-mono tracking-widest">
       
       <a href="/"
-        class="block lg:inline-block m-3 sm:mb-auto md:mb-auto lg:mb-auto text-gray-600 hover:text-black border-b-2 border-white hover:border-b-2 hover:border-black mr-4 transition delay-100 duration-150 ease-in-out">
-        About me
+        class="mobile-nav-link text-gray-400 hover:text-cyan-400 hover:bg-gray-900/50 block px-3 py-4 text-base uppercase w-full text-center border-b border-gray-800 last:border-0 transition-all duration-200">
+        > About me
       </a>
       
       <a href=""
-        class="block lg:inline-block m-3 sm:mb-auto md:mb-auto lg:mb-auto text-gray-600 hover:text-black border-b-2 border-white hover:border-b-2 hover:border-black mr-4 transition delay-100 duration-150 ease-in-out">
-        What I do
+        class="mobile-nav-link text-gray-400 hover:text-cyan-400 hover:bg-gray-900/50 block px-3 py-4 text-base uppercase w-full text-center border-b border-gray-800 last:border-0 transition-all duration-200">
+        > What I do
       </a>
       
       <a href=""
-        class="block lg:inline-block m-3 sm:mb-auto md:mb-auto lg:mb-auto text-gray-600 hover:text-black border-b-2 border-white hover:border-b-2 hover:border-black mr-4 transition delay-100 duration-150 ease-in-out">
-        Contact me
+        class="mobile-nav-link text-gray-400 hover:text-cyan-400 hover:bg-gray-900/50 block px-3 py-4 text-base uppercase w-full text-center border-b border-gray-800 last:border-0 transition-all duration-200">
+        > Contact me
       </a>
       
-    </div>
-
-    <div class="block md:hidden lg:hidden">
-      <button id="menuBtn"
-        class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-black hover:border-black"
-        onclick="navToggle();">
-        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <title>Menu</title>
-          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-        </svg>
-      </button>
     </div>
   </div>
 </nav>
-  <h1>about!</h1>
+  <main class="pt-20">
+    <h1>about!</h1>
+  </main>
   <script src="https://kit.fontawesome.com/3e3ef2aafe.js" crossorigin="anonymous"></script>
   <script>
     function navToggle() {
-      var btn = document.querySelector('#menuBtn');
-      var nav = document.querySelector('#menu');
-      if (btn) {
-        nav.classList.toggle('hidden');
-        nav.classList.toggle('mobile-nav', true)
-        nav.classList.toggle('absolute', true)
-      }
+      const mobileMenu = document.getElementById('mobileMenu');
+      const iconOpen = document.getElementById('menuIconOpen');
+      const iconClose = document.getElementById('menuIconClose');
+
+      mobileMenu.classList.toggle('open');
+      iconOpen.classList.toggle('hidden');
+      iconClose.classList.toggle('hidden');
     }
 
     function resetNav() {
-      let deviceWidth = document.documentElement.clientWidth;
-      var nav = document.querySelector('#menu');
-      if (deviceWidth > 767) {
-        if (nav) {
-          nav.classList.remove('mobile-nav')
-        }
-      }
-      else {
-        if (nav) {
-          nav.classList.add('hidden');
-          nav.classList.add('mobile-nav')
-          nav.classList.toggle('absolute', true)
+      const deviceWidth = document.documentElement.clientWidth;
+      const mobileMenu = document.getElementById('mobileMenu');
+      const iconOpen = document.getElementById('menuIconOpen');
+      const iconClose = document.getElementById('menuIconClose');
+
+      if (deviceWidth >= 768) {
+        if (mobileMenu && mobileMenu.classList.contains('open')) {
+          mobileMenu.classList.remove('open');
+          iconOpen.classList.remove('hidden');
+          iconClose.classList.add('hidden');
         }
       }
     }
 
-    (function () {
-      window.addEventListener("resize", resetNav);
-    })()
+    window.addEventListener("resize", resetNav);
   </script>
 </body>
 
