@@ -107,7 +107,8 @@
 </nav>
   <main class="pt-20">
     <!-- <h1>home!</h1>-->
-<section class="futuristic-grid grid-animation min-h-[80vh] flex items-center justify-center py-20 px-4 relative"
+<section
+  class="futuristic-grid grid-animation min-h-[80vh] flex items-center justify-center py-20 px-4 md:py-60 relative"
   style="background-color: #0a0e17;">
 
   <div class="scanline"></div>
@@ -200,51 +201,66 @@
 
   loop();
 </script>
-
 <div class="p-4 justify-center py-20 bg-[#0f172a] text-gray-300">
-  <h3 class="text-center text-4xl mb-12 font-bold text-white tracking-tight">
-    <span class="text-[var(--neon-cyan)] font-mono text-xl mr-2">01.</span> About Me
-  </h3>
-  <div class="flex justify-center">
-    <div class="w-full md:w-5/6 lg:w-4/6 lg:flex lg:justify-center lg:items-center gap-12">
-      <div class="flex justify-center items-center w-full lg:flex-1 p-2">
-        <div class="relative group">
-          <div class="absolute -inset-1 bg-gradient-to-r from-[var(--neon-cyan)] to-[var(--neon-purple)] rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-          <div class="relative flex justify-center items-center w-64 h-64 md:w-80 md:h-80 p-2 rounded-full bg-[#1e293b] border-2 border-[var(--glass-border)]">
-            <img src="assets/images/14072392.jpeg" class="rounded-full w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
-          </div>
+  <div class="max-w-4xl mx-auto">
+    <h3 class="text-center text-5xl mb-12 font-bold tracking-tight">
+      About Me
+    </h3>
+
+    <div class="space-y-8">
+      <p class="text-3xl md:text-3xl font-bold tracking-tight leading-tight">
+        Hey, I'm <span class="text-[var(--neon-cyan)]">Marvelous Akpotu</span>, a Software Engineer. I build
+        robust software and digital experiences for the web and beyond.
+      </p>
+
+      <div class="grid md:grid gap-8 text-lg leading-relaxed text-gray-400">
+        <div class="space-y-6">
+          <p>
+            My journey in software engineering is fueled by a relentless curiosity for solving problems.
+          </p>
+
+          <p>
+            I specialize in <strong class="text-white">Software Engineering with full-stack experience
+            </strong> and a focus on building applications that are not just
+            functional, but exceptionally performant and scalable.
+          </p>
+
+          <p>
+            I've had the privilege of contributing to diverse projects, from high-traffic web platforms to
+            <span class="text-white">Open Source</span> platforms.
+            I believe that engineering excellence and thoughtful design are the two pillars of every great product.
+          </p>
+
+          <p>
+            When I'm not coding, you'll likely find me exploring the latest in tech, contributing to the developer
+            community, or refining my craft through experimentation and continuous learning.
+          </p>
         </div>
       </div>
-      <div class="w-full lg:flex-1 p-2 mt-10 lg:mt-0">
-        <p class="text-3xl font-bold text-white mb-6">Hey, I am <span class="text-[var(--neon-cyan)]">Marvelous Akpotu</span></p>
-        <p class="text-lg leading-relaxed mb-6">
-          I'm a <strong class="text-white">Web Developer</strong> and an <strong class="text-white">Open Source Contributor</strong> based in Lagos, Nigeria.
-        </p>
-        <p class="mb-6 text-gray-400">
-          I specialize in developing high-performance applications with <span class="text-[var(--neon-cyan)] italic">meticulous attention to UI/UX</span>. For me, software development is more than a profession—it's a medium for innovation.
-        </p>
 
-        <div class="mt-10 flex flex-wrap gap-4">
-          <a href="https://github.com/Marvelxy" target="_blank" class="p-3 rounded-lg bg-[#1e293b] border border-[var(--glass-border)] text-white hover:text-[var(--neon-cyan)] hover:border-[var(--neon-cyan)] transition-all duration-300">
-            <i class="fa fa-github text-xl"></i>
+      <div class="pt-10 flex flex-wrap gap-6 items-center justify-center">
+        <div class="flex flex-wrap gap-4">
+          <a href="https://github.com/Marvelxy" target="_blank"
+            class="px-4 py-3 rounded-xl bg-[#1e293b] border-2 border-[var(--glass-border)] text-white transition-all duration-300 shadow-lg">
+            <i class="fa fa-github text-2xl"></i>
           </a>
-          <a href="https://gitlab.com/marvelxy" target="_blank" class="p-3 rounded-lg bg-[#1e293b] border border-[var(--glass-border)] text-white hover:text-red-500 hover:border-red-500 transition-all duration-300">
-            <i class="fa fa-gitlab text-xl"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/marvelous-akpotu-17915570/" target="_blank" class="p-3 rounded-lg bg-[#1e293b] border border-[var(--glass-border)] text-white hover:text-blue-400 hover:border-blue-400 transition-all duration-300">
-            <i class="fa fa-linkedin text-xl"></i>
-          </a>
-          <a href="#my-works" class="flex items-center px-6 py-3 rounded-lg bg-transparent border border-[var(--neon-cyan)] text-[var(--neon-cyan)] font-mono text-sm uppercase tracking-widest hover:bg-[var(--neon-cyan)] hover:text-[#0f172a] transition-all duration-300">
-            View Works
+          <a href="https://www.linkedin.com/in/marvelous-akpotu/" target="_blank"
+            class="px-4 py-3 rounded-xl bg-[#1e293b] border-2 border-[var(--glass-border)] text-blue-400 border-blue-400 transition-all duration-300 shadow-lg">
+            <i class="fa fa-linkedin text-2xl"></i>
           </a>
         </div>
 
+        <a href="#my-works"
+          class="group flex items-center gap-3 px-8 py-4 rounded-xl bg-transparent border-2 border-[var(--neon-cyan)] text-[var(--neon-cyan)] font-mono text-sm uppercase tracking-widest hover:bg-[var(--neon-cyan)] hover:text-[#0f172a] transition-all duration-500">
+          View Projects
+          <i class="fa fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+        </a>
       </div>
     </div>
   </div>
 </div>
 
-<div class="p-4 justify-center bg-[#0a0e17] py-20 border-t border-[var(--glass-border)]">
+<div class="p-4 justify-center bg-[#0a0e17] py-20">
   <h3 class="text-center text-4xl mb-12 font-bold text-white tracking-tight">
     <span class="text-[var(--neon-cyan)] font-mono text-xl mr-2">02.</span> What I Do
   </h3>
