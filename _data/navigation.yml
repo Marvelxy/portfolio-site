@@ -1,6 +1,6 @@
 - name: About me
-  link: /
-- name: What I do
-  link: #
+  link: /#about
+- name: Portfolio
+  link: /#portfolio
 - name: Contact me
-  link: #
+  link: /#contact
