@@ -1,0 +1,93 @@
+<section class="futuristic-grid grid-animation min-h-[80vh] flex items-center justify-center py-20 px-4 relative"
+  style="background-color: #0a0e17;">
+
+  <div class="scanline"></div>
+
+  <div class="glass-panel max-w-4xl w-full p-8 md:p-12 rounded-2xl tech-border text-center">
+    <div class="mb-6">
+      <span
+        class="inline-block px-3 py-1 rounded-full border border-[var(--neon-cyan)] text-[var(--neon-cyan)] text-xs font-mono uppercase tracking-widest mb-4">
+        System.Init()
+      </span>
+      <h1 class="text-4xl md:text-7xl font-bold text-white mb-6 tracking-tighter">
+        <!--
+        <span class="text-gray-500 font-mono text-xl md:text-2xl block mb-4 uppercase tracking-[0.3em]">
+          > Initialize Portfolio
+        </span>
+        -->
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-300 to-gray-500">
+          Marvelous Akpotu
+        </span>
+      </h1>
+
+      <div class="h-12 flex justify-center items-center mb-6">
+        <p class="text-xl md:text-3xl text-cyan-400 font-mono font-medium">
+          <span class="text-gray-600 mr-2">$</span><span id="typing-text"></span><span class="blinking-cursor">_</span>
+        </p>
+      </div>
+    </div>
+
+    <p class="text-gray-400 max-w-2xl mx-auto mb-10 text-lg md:text-xl leading-relaxed font-light italic">
+      "Architecting scalable systems and crafting <span class="text-white font-semibold">seamless digital
+        experiences</span> through code."
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <a href="#my-works"
+        class="border hover:bg-white hover:text-black transition-all duration-300 rounded-lg px-8 py-3 font-bold uppercase tracking-wider text-sm">
+        Explore Projects
+      </a>
+      <a href="https://github.com/Marvelxy" target="_blank"
+        class="border hover:bg-white hover:text-black transition-all duration-300 rounded-lg px-8 py-3 font-bold uppercase tracking-wider text-sm flex items-center gap-2">
+        <i class="fa fa-github text-sm"></i>
+        <span class="font-mono text-sm uppercase tracking-wider">Access Repository</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  const phrases = [
+    "Open Source Contributor",
+    "Software Engineer"
+  ];
+  let i = 0;
+  let j = 0;
+  let currentPhrase = [];
+  let isDeleting = false;
+  let isEnd = false;
+
+  function loop() {
+    isEnd = false;
+    const phrase = phrases[i];
+
+    if (!isDeleting) {
+      if (j < phrase.length) {
+        currentPhrase.push(phrase[j]);
+        j++;
+      } else {
+        isEnd = true;
+        isDeleting = true;
+      }
+    } else {
+      if (j > 0) {
+        currentPhrase.pop();
+        j--;
+      } else {
+        isDeleting = false;
+        i = (i + 1) % phrases.length;
+        j = 0;
+        currentPhrase = [];
+      }
+    }
+
+    document.getElementById('typing-text').innerHTML = currentPhrase.join('');
+
+    const speedUp = Math.random() * (60 - 30) + 30;
+    const normalSpeed = Math.random() * (120 - 80) + 80;
+    const time = isEnd ? 2000 : isDeleting ? speedUp : normalSpeed;
+    setTimeout(loop, time);
+  }
+
+  loop();
+</script>
