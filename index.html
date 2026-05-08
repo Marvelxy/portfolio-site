@@ -107,113 +107,149 @@
 </nav>
   <main class="pt-20">
     <!-- <h1>home!</h1>-->
-<img src="/generated/analytics-3088958_1920-800-5d2572d15.jpg" srcset="/generated/analytics-3088958_1920-400-5d2572d15.jpg 400w, /generated/analytics-3088958_1920-600-5d2572d15.jpg 600w, /generated/analytics-3088958_1920-800-5d2572d15.jpg 800w, /generated/analytics-3088958_1920-1000-5d2572d15.jpg 1000w">
+<section class="futuristic-grid grid-animation min-h-[80vh] flex items-center justify-center py-20 px-4 relative"
+  style="background-color: #0a0e17;">
 
+  <div class="scanline"></div>
 
-<div class="p-4 w-full justify-center py-10">
-  <h3 class="text-center text-3xl mb-6">About Me</h3>
+  <div class="glass-panel max-w-4xl w-full p-8 md:p-12 rounded-2xl tech-border text-center">
+    <div class="mb-6">
+      <span
+        class="inline-block px-3 py-1 rounded-full border border-[var(--neon-cyan)] text-[var(--neon-cyan)] text-xs font-mono uppercase tracking-widest mb-4">
+        System.Init()
+      </span>
+      <h1 class="text-4xl md:text-7xl font-bold text-white mb-6 tracking-tighter">
+        <!--
+        <span class="text-gray-500 font-mono text-xl md:text-2xl block mb-4 uppercase tracking-[0.3em]">
+          > Initialize Portfolio
+        </span>
+        -->
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-300 to-gray-500">
+          Marvelous Akpotu
+        </span>
+      </h1>
+
+      <div class="h-12 flex justify-center items-center mb-6">
+        <p class="text-xl md:text-3xl text-cyan-400 font-mono font-medium">
+          <span class="text-gray-600 mr-2">$</span><span id="typing-text"></span><span class="blinking-cursor">_</span>
+        </p>
+      </div>
+    </div>
+
+    <p class="text-gray-400 max-w-2xl mx-auto mb-10 text-lg md:text-xl leading-relaxed font-light italic">
+      "Architecting scalable systems and crafting <span class="text-white font-semibold">seamless digital
+        experiences</span> through code."
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <a href="#my-works"
+        class="border hover:bg-white hover:text-black transition-all duration-300 rounded-lg px-8 py-3 font-bold uppercase tracking-wider text-sm">
+        Explore Projects
+      </a>
+      <a href="https://github.com/Marvelxy" target="_blank"
+        class="border hover:bg-white hover:text-black transition-all duration-300 rounded-lg px-8 py-3 font-bold uppercase tracking-wider text-sm flex items-center gap-2">
+        <i class="fa fa-github text-sm"></i>
+        <span class="font-mono text-sm uppercase tracking-wider">Access Repository</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  const phrases = [
+    "Open Source Contributor",
+    "Software Engineer"
+  ];
+  let i = 0;
+  let j = 0;
+  let currentPhrase = [];
+  let isDeleting = false;
+  let isEnd = false;
+
+  function loop() {
+    isEnd = false;
+    const phrase = phrases[i];
+
+    if (!isDeleting) {
+      if (j < phrase.length) {
+        currentPhrase.push(phrase[j]);
+        j++;
+      } else {
+        isEnd = true;
+        isDeleting = true;
+      }
+    } else {
+      if (j > 0) {
+        currentPhrase.pop();
+        j--;
+      } else {
+        isDeleting = false;
+        i = (i + 1) % phrases.length;
+        j = 0;
+        currentPhrase = [];
+      }
+    }
+
+    document.getElementById('typing-text').innerHTML = currentPhrase.join('');
+
+    const speedUp = Math.random() * (60 - 30) + 30;
+    const normalSpeed = Math.random() * (120 - 80) + 80;
+    const time = isEnd ? 2000 : isDeleting ? speedUp : normalSpeed;
+    setTimeout(loop, time);
+  }
+
+  loop();
+</script>
+
+<div class="p-4 justify-center py-20 bg-[#0f172a] text-gray-300">
+  <h3 class="text-center text-4xl mb-12 font-bold text-white tracking-tight">
+    <span class="text-[var(--neon-cyan)] font-mono text-xl mr-2">01.</span> About Me
+  </h3>
   <div class="flex justify-center">
-    <div class="w-full md:w-5/6 lg:w-5/6 lg:flex lg:justify-between lg:items-center">
-      <div class="flex justify-center items-center w-full md:w-full lg:w-1/2 p-2 h-80 lg:h-96">
-        <div class="flex justify-center items-center w-full md:w-full lg:w-3/5 p-2 rounded-full bg-gray-50 h-full">
-          <img src="assets/images/14072392.jpeg" width="150" height="150" class="rounded-full">
+    <div class="w-full md:w-5/6 lg:w-4/6 lg:flex lg:justify-center lg:items-center gap-12">
+      <div class="flex justify-center items-center w-full lg:flex-1 p-2">
+        <div class="relative group">
+          <div class="absolute -inset-1 bg-gradient-to-r from-[var(--neon-cyan)] to-[var(--neon-purple)] rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+          <div class="relative flex justify-center items-center w-64 h-64 md:w-80 md:h-80 p-2 rounded-full bg-[#1e293b] border-2 border-[var(--glass-border)]">
+            <img src="assets/images/14072392.jpeg" class="rounded-full w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+          </div>
         </div>
       </div>
-      <div class="w-full md:w-full lg:w-1/2 p-2">
-        <p class="text-2xl my-6">Hey, I am Marvelous Akpotu</p>
-        <p class="text-1xl">I'm a <strong>web developer</strong> and an <strong>open source contributor</strong> living
-          in
-          Lagos, Nigeria.</p>
-        <p class="my-6">I develop applications with thoughtful UI and UX.</p>
-        <p>Software development is not just a job, it is part of me.</p>
-        <div class="mt-10">
-          <a href="https://github.com/Marvelxy" target="_blank">
-            <button
-              class="uppercase pt-2 pb-2 pl-4 pr-4 text-black rounded bg-white border border-black hover:bg-gray-800 hover:text-white">
-              <i class="fa fa-github"></i>
-            </button>
+      <div class="w-full lg:flex-1 p-2 mt-10 lg:mt-0">
+        <p class="text-3xl font-bold text-white mb-6">Hey, I am <span class="text-[var(--neon-cyan)]">Marvelous Akpotu</span></p>
+        <p class="text-lg leading-relaxed mb-6">
+          I'm a <strong class="text-white">Web Developer</strong> and an <strong class="text-white">Open Source Contributor</strong> based in Lagos, Nigeria.
+        </p>
+        <p class="mb-6 text-gray-400">
+          I specialize in developing high-performance applications with <span class="text-[var(--neon-cyan)] italic">meticulous attention to UI/UX</span>. For me, software development is more than a profession—it's a medium for innovation.
+        </p>
+
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a href="https://github.com/Marvelxy" target="_blank" class="p-3 rounded-lg bg-[#1e293b] border border-[var(--glass-border)] text-white hover:text-[var(--neon-cyan)] hover:border-[var(--neon-cyan)] transition-all duration-300">
+            <i class="fa fa-github text-xl"></i>
           </a>
-          <a href="https://gitlab.com/marvelxy" target="_blank">
-            <button
-              class="uppercase pt-2 pb-2 pl-4 pr-4 text-red-700 rounded bg-white border border-red-700 hover:bg-red-800 hover:text-white">
-              <i class="fa fa-gitlab"></i>
-            </button>
+          <a href="https://gitlab.com/marvelxy" target="_blank" class="p-3 rounded-lg bg-[#1e293b] border border-[var(--glass-border)] text-white hover:text-red-500 hover:border-red-500 transition-all duration-300">
+            <i class="fa fa-gitlab text-xl"></i>
           </a>
-          <a href="https://www.linkedin.com/in/marvelous-akpotu-17915570/" target="_blank">
-            <button
-              class="uppercase pt-2 pb-2 pl-4 pr-4 text-blue-500 rounded bg-white border border-blue-500 hover:bg-blue-500 hover:text-white">
-              <i class="fa fa-linkedin"></i>
-            </button>
+          <a href="https://www.linkedin.com/in/marvelous-akpotu-17915570/" target="_blank" class="p-3 rounded-lg bg-[#1e293b] border border-[var(--glass-border)] text-white hover:text-blue-400 hover:border-blue-400 transition-all duration-300">
+            <i class="fa fa-linkedin text-xl"></i>
           </a>
-          <!--
-          <a href="https://twitter.com/marvellxy" target="_blank">
-            <button
-              class="uppercase pt-2 pb-2 pl-4 pr-4 text-blue-400 rounded bg-white border border-blue-400 hover:bg-blue-400 hover:text-white">
-              <i class="fa fa-twitter"></i>
-            </button>
-          </a>-->
-          <a href="#my-works" class="md:ml-5 lg:ml-5">
-            <button
-              class="uppercase pt-2 pb-2 pl-4 pr-4 text-blue-400 rounded bg-white border border-blue-400 hover:bg-blue-400 hover:text-white">
-              MY WORKS
-            </button>
+          <a href="#my-works" class="flex items-center px-6 py-3 rounded-lg bg-transparent border border-[var(--neon-cyan)] text-[var(--neon-cyan)] font-mono text-sm uppercase tracking-widest hover:bg-[var(--neon-cyan)] hover:text-[#0f172a] transition-all duration-300">
+            View Works
           </a>
         </div>
+
       </div>
     </div>
   </div>
 </div>
 
-<div class="p-4 w-full justify-center bg-gray-100 py-10">
-  <h3 class="text-center text-3xl mb-6">What I do</h3>
+<div class="p-4 justify-center bg-[#0a0e17] py-20 border-t border-[var(--glass-border)]">
+  <h3 class="text-center text-4xl mb-12 font-bold text-white tracking-tight">
+    <span class="text-[var(--neon-cyan)] font-mono text-xl mr-2">02.</span> What I Do
+  </h3>
   <div class="flex justify-center">
-    <!--<div class="w-full md:w-5/6 lg:w-5/6 lg:flex lg:justify-between lg:items-center">
-                <div class="flex justify-center items-center w-full md:w-full lg:w-1/2 p-2 h-80 lg:h-96">
-                  <div class="flex justify-center items-center w-full md:w-full lg:w-3/5 p-2 rounded-full bg-gray-50 h-full">
-                    <img src="assets/images/14072392.jpeg" width="150" height="150" class="rounded-full">
-                  </div>
-                </div>
-                <div class="w-full md:w-full lg:w-1/2 p-2">
-                  <p class="text-2xl my-6">Hey, I am Marvelous Akpotu!</p>
-                  <p class="text-1xl">I'm a <strong>web developer</strong> and an <strong>open source contributor</strong> living
-                    in
-                    Lagos, Nigeria.</p>
-                  <p class="my-6">I develop applications with thoughtful UI and UX.</p>
-                  <p>Software development is not just a job, it is part of me.</p>
-                  <div class="mt-10">
-                    <a href="https://github.com/Marvelxy" target="_blank">
-                      <button
-                        class="uppercase pt-2 pb-2 pl-4 pr-4 text-black rounded bg-white border border-black hover:bg-gray-800 hover:text-white">
-                        <i class="fa fa-github"></i>
-                      </button>
-                    </a>
-                    <a href="https://gitlab.com/marvelxy" target="_blank">
-                      <button
-                        class="uppercase pt-2 pb-2 pl-4 pr-4 text-red-700 rounded bg-white border border-red-700 hover:bg-red-800 hover:text-white">
-                        <i class="fa fa-gitlab"></i>
-                      </button>
-                    </a>
-                    <a href="https://www.linkedin.com/in/marvelous-akpotu-17915570/" target="_blank">
-                      <button
-                        class="uppercase pt-2 pb-2 pl-4 pr-4 text-blue-500 rounded bg-white border border-blue-500 hover:bg-blue-500 hover:text-white">
-                        <i class="fa fa-linkedin"></i>
-                      </button>
-                    </a>
-                    <a href="https://twitter.com/marvellxy" target="_blank">
-                      <button
-                        class="uppercase pt-2 pb-2 pl-4 pr-4 text-blue-400 rounded bg-white border border-blue-400 hover:bg-blue-400 hover:text-white">
-                        <i class="fa fa-twitter"></i>
-                      </button>
-          </a>
-          <a href="#my-works" class="md:ml-5 lg:ml-5">
-            <button
-              class="uppercase pt-2 pb-2 pl-4 pr-4 text-blue-400 rounded bg-white border border-blue-400 hover:bg-blue-400 hover:text-white">
-              MY WORKS
-            </button>
-          </a>
-          </div>
-          </div>
-    </div>-->
+    <!-- Existing content... -->
   </div>
 </div>
   </main>
