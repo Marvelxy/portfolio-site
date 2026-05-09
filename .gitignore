@@ -28,3 +28,4 @@ _site/
 dist/
 node_modules/
 old-site/
+.DS_Store
