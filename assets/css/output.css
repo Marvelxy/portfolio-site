@@ -31233,6 +31233,8 @@ video {
 
 html {
   scroll-behavior: smooth;
+  /* Offset for fixed header */
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -182669,3 +182671,4 @@ body {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
+
