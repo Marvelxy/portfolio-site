@@ -1,15 +1,15 @@
 {
   "scripts": {
-    "dev": "concurrently \"npx tailwindcss -i ./assets/css/styles.scss -o ./assets/css/output.css --watch\" \"bundle exec jekyll serve --port 4001 --livereload\"",
-    "build": "npx tailwindcss -i ./assets/css/styles.scss -o ./assets/css/output.css --minify"
+    "dev": "concurrently \"npx @tailwindcss/cli -i ./assets/css/styles.scss -o ./assets/css/output.css --watch\" \"bundle exec jekyll serve --port 4001 --livereload\"",
+    "build": "npx @tailwindcss/cli -i ./assets/css/styles.scss -o ./assets/css/output.css --minify"
   },
   "dependencies": {
     "autoprefixer": "^10.5.0",
     "postcss": "^8.5.24",
     "postcss-import": "^14.0.2",
     "sharp": "^0.35.0",
-    "tailwind": "^4.0.0",
-    "tailwindcss": "^4.3.3",
+    "tailwindcss": "^4.1.11",
+    "@tailwindcss/cli": "^4.1.11",
     "ws": "^6.2.4"
   },
   "resolutions": {
