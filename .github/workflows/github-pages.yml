@@ -30,10 +30,10 @@ jobs:
         run: bundle install
 
       - name: Install Node dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: Build Tailwind
-        run: npx tailwindcss -i ./assets/css/styles.scss -o ./assets/css/output.css --minify
+        run: npx tailwindcss -i ./assets/css/styles.scss -o ./assets/css/output.css
 
       - name: Build Jekyll
         run: bundle exec jekyll build
